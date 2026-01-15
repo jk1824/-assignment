@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from app.models import Address
 from app.schemas import AddressCreate
 
-
 def create_address(db: Session, address: AddressCreate):
     db_address = Address(**address.dict())
     db.add(db_address)

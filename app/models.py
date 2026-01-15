@@ -5,8 +5,8 @@ class Address(Base):
     __tablename__ = "addresses"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
-    street = Column(String, nullable=False)
-    city = Column(String, nullable=False)
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
+    name = Column(String, nullable=True)
+    street = Column(String, nullable=True)
+    city = Column(String, nullable=True)
